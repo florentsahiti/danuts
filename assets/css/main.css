@@ -152,6 +152,8 @@ h6 {
   overflow: hidden;
 }
 
+
+
 .pulsating-play-btn:before {
   content: "";
   position: absolute;
@@ -791,6 +793,8 @@ section,
 .hero {
   padding: 0;
 }
+
+
 
 .hero .carousel {
   width: 100%;
@@ -1949,6 +1953,8 @@ section,
   font-weight: 600;
   margin-bottom: 5px;
 }
+
+
 
 .contact .info-item p {
   padding: 0;
