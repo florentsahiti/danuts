@@ -1039,6 +1039,158 @@ section,
   }
 }
 
+/* Project Toggle Button Styles */
+.project-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: var(--heading-color);
+}
+
+.project-toggle-btn:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.project-toggle-btn h2 {
+  color: inherit;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.project-toggle-btn.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Project Content Styles */
+.project-content {
+  margin-top: 30px;
+  padding: 40px 20px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-step {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.project-step:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.step-title {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: var(--heading-font);
+}
+
+.step-subtitle {
+  color: var(--heading-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.step-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.step-list li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.step-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.step-list ol {
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.step-list ol li {
+  padding-left: 0;
+  list-style: decimal;
+}
+
+.step-list ul {
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.step-list ul li:before {
+  content: "◦";
+  font-size: 16px;
+}
+
+.step-tip {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  padding: 15px 20px;
+  border-left: 4px solid var(--accent-color);
+  margin-top: 15px;
+  border-radius: 4px;
+  color: var(--default-color);
+}
+
+@media (max-width: 768px) {
+  .project-toggle-btn h2 {
+    font-size: 22px;
+  }
+  
+  .step-title {
+    font-size: 20px;
+  }
+  
+  .project-content {
+    padding: 30px 15px;
+  }
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/

@@ -165,3 +165,24 @@
   });
 
 })();
+
+/**
+ * Toggle Project Content
+ */
+function toggleProjectContent() {
+  const content = document.getElementById('projectContent');
+  const button = document.getElementById('projectToggleBtn');
+  const icon = document.getElementById('toggleIcon');
+  
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    button.classList.add('active');
+    // Smooth scroll to content
+    setTimeout(() => {
+      content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  } else {
+    content.style.display = 'none';
+    button.classList.remove('active');
+  }
+}
