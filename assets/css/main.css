@@ -504,7 +504,24 @@ svg { display: block; }
 
 @media (max-width: 640px) {
   .hero { height: 100svh; min-height: 640px; }
-  .hero-content { padding-bottom: 8.5rem; }
+  .hero-content { padding-bottom: 6.5rem; }
+  .hero-eyebrow { font-size: 0.7rem; }
+  .hero-title {
+    font-size: clamp(1.9rem, 1.35rem + 5.5vw, 2.6rem);
+    max-width: 13ch;
+    margin-top: 0.5em;
+  }
+  .hero-copy {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    max-width: 32ch;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-actions { margin-top: 1.6rem; gap: 0.8rem; }
   .hero-chrome { bottom: 1.4rem; }
 }
 
