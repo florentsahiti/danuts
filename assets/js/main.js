@@ -294,7 +294,8 @@
           orderForm.querySelectorAll("h2, .field, .order-total, .order-ship, .form-foot").forEach(function (el) { el.hidden = true; });
           successEl2.hidden = false;
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (window.console) console.warn("Order not sent:", err && err.message);
           setOrderState("error", "Porosia nuk u dërgua. Provoni përsëri ose na telefononi: +383 49 794 177.");
         });
     });
