@@ -125,27 +125,6 @@
     play();
   }
 
-  /* ---------- Accordion ---------- */
-  document.querySelectorAll(".accordion").forEach(function (accordion) {
-    var items = accordion.querySelectorAll(".accordion-item");
-    items.forEach(function (item) {
-      var trigger = item.querySelector(".accordion-trigger");
-      if (!trigger) return;
-      trigger.addEventListener("click", function () {
-        var isOpen = item.classList.contains("is-open");
-        items.forEach(function (other) {
-          other.classList.remove("is-open");
-          var t = other.querySelector(".accordion-trigger");
-          if (t) t.setAttribute("aria-expanded", "false");
-        });
-        if (!isOpen) {
-          item.classList.add("is-open");
-          trigger.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-  });
-
   /* ---------- Cinema / video ---------- */
   document.querySelectorAll(".cinema").forEach(function (cinema) {
     var playBtn = cinema.querySelector(".play-btn");
@@ -215,8 +194,8 @@
   var ORDER_ENDPOINT = "https://formsubmit.co/ajax/ramadansylejmani1992@gmail.com";
   var FREE_SHIPPING_OVER_KG = 5;
   var PRODUCTS = {
-    lajthi: { name: "Lajthi", price: 5, image: "assets/img/product-lajthi.jpg", alt: "Lajthi në enë qelqi" },
-    arra: { name: "Arra", price: 7, image: "assets/img/product-arra.jpg", alt: "Arra në enë qelqi" }
+    lajthi: { name: "Lajthi", price: 5, image: "assets/img/product-lajthi-bowl.jpg", alt: "Lajthi në enë druri" },
+    arra: { name: "Arra", price: 7, image: "assets/img/product-arra-bowl.jpg", alt: "Arra në enë druri" }
   };
   var orderForm = document.getElementById("order-form");
   if (orderForm) {
